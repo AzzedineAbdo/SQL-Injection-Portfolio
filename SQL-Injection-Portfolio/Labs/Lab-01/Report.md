@@ -39,7 +39,15 @@ Full headers, cookies, and exact raw request formatting were not preserved.
 - `--` starts an SQL comment in dialects that support it; comment syntax and whitespace requirements vary by DBMS.
 
 ## Evidence and Screenshots
-Source: supplied DOCX, page 1. It includes the filter URL and a screenshot with the lab success banner. Add only a genuine, sanitized screenshot:
+
+The following screenshots document the testing process and successful lab completion.
+
+### 1. Category Parameter Testing
+![Category parameter testing](../../Screenshots/Lab-01/01-hidden-data-category-page.png)
+
+### 2. Lab Completion Confirmation
+![Lab solved confirmation](../../Screenshots/Lab-01/02-lab-solved-confirmation.png)
+
 `![Sanitized Lab 01 evidence](../../Screenshots/Lab-01-sanitized.png)`
 
 ## Security Impact

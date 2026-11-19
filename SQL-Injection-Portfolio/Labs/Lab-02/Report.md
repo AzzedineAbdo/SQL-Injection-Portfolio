@@ -44,11 +44,21 @@ Recorded attempts:
 ' UNION SELECT 'abcdef',NULL,NULL--
 ```
 `UNION SELECT` appends a result set; the number of columns and compatible data types must match. `dual` and `v$version` are Oracle-associated constructs. `@@version` is used by multiple DBMSs with dialect-specific behavior. `#` is a MySQL comment marker; `--` handling varies. These are recorded attempts, not a claim that each succeeded.
-
 ## Evidence and Screenshots
-- Supplied DOCX, pages 2–3: UNION/version payloads and Burp screenshots.
-- Prior conversation, 19 November 2026: explicit solved markers and version value.
-- Add sanitized genuine evidence: `![Sanitized Lab 02 evidence](../../Screenshots/Lab-02-sanitized.png)`
+
+The following screenshots document the UNION-based SQL injection testing process.
+
+### 1. UNION SELECT Response
+![UNION SELECT response](../../Screenshots/Lab-02/01-union-select-response.png)
+
+### 2. UNION Request
+![UNION request](../../Screenshots/Lab-02/02-union-request-redacted.png)
+
+### 3. UNION SELECT Testing
+![UNION SELECT test](../../Screenshots/Lab-02/03-union-select-test.png)
+
+### 4. Follow-up UNION Testing
+![UNION SELECT follow-up](../../Screenshots/Lab-02/04-union-select-followup.png)
 
 ## Security Impact
 UNION injection may expose data through the application's normal response. Version disclosure can help attackers identify DBMS-specific weaknesses.

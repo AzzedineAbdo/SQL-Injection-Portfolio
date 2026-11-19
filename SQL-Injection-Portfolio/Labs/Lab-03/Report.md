@@ -69,13 +69,25 @@ The injection point was the `TrackingId` cookie. Full request paths and headers 
 The extracted credential is deliberately not reproduced in this public report.
 
 ## Evidence and Screenshots
-- Supplied DOCX, pages 3–6: boolean checks, administrator lookup, length checks, SUBSTRING pattern, Intruder results, and login evidence.
-- Completion was verified by reaching the account page showing `Your username is: administrator`.
-- Add genuine sanitized screenshots:
-  - `![Boolean tests](../../Screenshots/Lab-03-boolean-tests.png)`
-  - `![Intruder results](../../Screenshots/Lab-03-intruder-results.png)`
-  - `![Administrator account page](../../Screenshots/Lab-03-account-page.png)`
 
+The following screenshots document the blind SQL injection testing and successful administrator authentication.
+
+### 1. True and False Condition Tests
+![Boolean condition tests](../../Screenshots/Lab-03/01-true-condition-response.png)
+![False condition comparison](../../Screenshots/Lab-03/02-false-condition-comparison.png)
+
+### 2. Administrator Existence Check
+![Administrator existence check](../../Screenshots/Lab-03/03-administrator-exists-check.png)
+
+### 3. Password Length Testing
+![Password length check](../../Screenshots/Lab-03/04-password-length-check.png)
+![Length boundary test](../../Screenshots/Lab-03/05-length-boundary-test.png)
+
+### 4. Character Extraction
+![SUBSTRING condition test](../../Screenshots/Lab-03/06-substring-condition-test.png)
+
+### 5. Administrator Authentication
+![Administrator login form](../../Screenshots/Lab-03/07-administrator-login-form.png)
 ## Security Impact
 Blind SQL injection can disclose sensitive database contents even without direct query output. A conditional oracle can reveal account existence, password length, and password characters, potentially enabling account compromise.
 
